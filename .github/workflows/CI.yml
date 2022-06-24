@@ -11,7 +11,15 @@ jobs:
           pytest
 
       - name: build
-        run: docker build -t testynov .
+        run: docker build -t helinemor/testynov:test .
 
       - name: run
-        run: docker run -t testynov
+        run: docker run -t helinemor/testynov:test
+
+      - name: dockerhub
+        env:
+          ID : ${{secrets.ID}}
+          PASSWORD : ${{secrets.PASSWORD}}
+        run: |
+        docker login -u $ID -p $PASSWORD
+        docker push helinemor/testynov:test
