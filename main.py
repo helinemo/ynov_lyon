@@ -1,6 +1,8 @@
 def count_char(password):
     return len(password)
-
+"""
+test
+"""
 def check_invalid_special_char(password):
     """
         banned char: '@', '=', '+', ' '
