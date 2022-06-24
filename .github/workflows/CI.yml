@@ -11,9 +11,7 @@ jobs:
           pytest
 
       - name: build
-        run: |
-          docker build testYnov .
+        run: docker build testynov .
 
       - name: run
-        run: |
-          docker run testYnov
+        run: docker run testynov
